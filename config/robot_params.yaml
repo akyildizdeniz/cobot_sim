@@ -1,0 +1,49 @@
+# config/robot_params.yaml
+robot_motion_control:
+  ros__parameters:
+    # Speed scaling factors
+    speed_scales:
+      full: 3.0
+      slow: 0.5
+      stop: 0.0
+      unknown: 0.0
+    
+    # Robot configuration
+    num_joints: 6
+    min_speed_scale: 0.1
+    joint_names: ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 
+                 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
+    
+    # Trajectory timing parameters  
+    base_joint_speed: 0.1
+    min_duration: 0.5
+    max_duration: 10.0
+    fallback_duration: 1.5
+    safe_fallback: 2.0
+    
+    # Robot positions
+    position_a: [-1.60, -1.60, -2.20, -1.21, 1.60, -0.03]
+    position_b: [-1.40, -1.30, -1.95, -0.85, 1.20, -0.03]
+    proximity_threshold: 0.05
+    
+    # Control timing
+    motion_control_period: 1.0
+    speed_change_threshold: 0.1
+    server_timeout: 10.0
+
+speed_controller:
+  ros__parameters:
+    slow_in: 800.0
+    slow_out: 820.0
+    stop_in: 400.0
+    stop_out: 420.0
+    control_period: 0.05
+
+proximity_sensor:
+  ros__parameters:
+    distance_min: 200.0
+    distance_max: 1200.0
+    publish_rate: 0.05
+    update_rate: 0.1
+    hold_duration_min: 1.0
+    hold_duration_max: 3.0
