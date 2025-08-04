@@ -8,7 +8,7 @@
 
 ## System Architecture
 
-![Node Architecture](docs/architecture.svg)
+![Node Architecture](docs/architecture.png)
 
 
 ## Features
